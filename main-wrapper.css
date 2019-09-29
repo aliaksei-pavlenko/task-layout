@@ -1,0 +1,49 @@
+.main-wrapper {
+    display: flex;
+    min-height: calc(100vh - 89px - 57px);
+    position: relative;
+}
+
+.main-blank {
+    flex: 0 1 130px;
+    background-color: #0d3a7f;
+}
+
+.main-welcom {
+    flex: 0 0 348px;
+    background-color: #0d3a7f;
+}
+
+.main-slider {
+    flex: 1 0 615px;
+    background-image: url('./johannes-ludwig-348591-unsplash@2x.png');
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width: 970px) {
+    .main-wrapper {
+        min-height: calc(100vh - 60px);
+    }
+    .main-slider, .main-blank {
+        display: none;
+    }
+    .main-welcom {
+        flex: 1 1 130px;
+        background-image: url('./jasper-van-der-meij-97274-unsplash@3x.png');
+        background-position: center;
+        background-size: cover;
+
+        /* position: relative;
+        z-index: -1; */
+    }
+    /* .main-welcom::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        z-index: 0;
+    } */
+}
+

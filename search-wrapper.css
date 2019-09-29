@@ -1,0 +1,227 @@
+.search-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+
+    min-height: 89px;
+    width: 100%;
+}
+
+.search-wrapper-blank-left, .search-wrapper-blank-right {
+    flex: 0 10 127px;
+}
+
+.search-fields-wrapper {
+    display: flex;
+    flex: 1 1 1112px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 21px 0 rgba(140, 160, 191, 0.24);
+}
+
+.search-where{
+    flex: 1 0 210px;
+    display: flex;
+    position: relative;
+}
+
+.search-where-input{
+    
+    border: none;
+    align-self: center;
+    margin-left: 52px;
+    height: 88px;
+    flex: 1 1 auto;
+    border-right: solid 0.3px #BBC9DF;
+
+    font-family: Libre Franklin Medium;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.47px;
+    color: #364459;
+}
+.search-where-input:focus{
+    outline: none;
+}
+
+.my-input-grey-color-placeholder::placeholder{
+    opacity: 0.29;
+    color: #364459;
+}
+
+.search-where::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background-image: url('./004-pin.png');
+    top: 32px;
+    left: 24px;
+}
+
+.search-where-input::placeholder {
+    font-family: Libre Franklin Medium;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.47px;
+    color: #364459;
+}
+
+.search-when{
+    flex: 0 0 210px;
+    display: flex;
+    border-right: solid 0.3px #BBC9DF;
+}
+
+.search-when span {
+    position: relative;
+    align-self: center;
+    margin-left: 55px;
+    font-family: Libre Franklin Medium;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.47px;
+    color: #364459;
+}
+
+.search-when span::before {
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-image: url('./group.png');
+    top: 0;
+    left: -31px;
+}
+
+.search-duration{
+    flex: 0 0 210px;
+    display: flex;
+}   
+
+.search-duration span {
+    position: relative;
+    align-self: center;
+    margin-left: 60px;
+    font-family: Libre Franklin Medium;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: 0.47px;
+    color: #364459;
+}
+
+.search-duration span::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 20px;
+    background-image: url('./002-bed.png');
+    top: 0;
+    left: -38px;
+}
+
+.search-btn{
+    flex: 0 0 89px;
+    background-color: #16c2b8;
+}
+
+.search-btn svg {
+    width: 55px;
+    margin-top: 28px;
+    margin-left: 19px;
+}
+
+@media (max-width: 970px) {
+
+    .search-wrapper {
+        position: static;
+        display: block;
+        max-width: 335px;
+        min-height: 60px;
+        margin: 0 auto;
+        /* margin-top: 110px; */
+        margin-top: 29.4%;
+    }
+    .search-fields-wrapper {
+        min-height: 60px;
+        flex: 1 1 335px;
+        
+        /*  */
+        flex-direction: column;
+        /*  */
+    }
+
+    .search-where::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 25px;
+        top: 17px;
+        left: 24px;
+    }
+
+    .search-where-input {
+        height: 60px;
+        border-right: none;
+    }
+    .search-when, .search-duration, .search-btn, .search-wrapper-blank-left, .search-wrapper-blank-right{
+        display: none;
+    }
+
+    /*  */
+    .search-where, .search-when, .search-duration  {
+        flex: 1 0 60px;
+        /* display: flex; */
+        background-color: #ffffff;
+    }
+
+    .search-when {
+        border-top: solid 0.3px #BBC9DF;
+        border-bottom: solid 0.3px #BBC9DF;
+        border-right: none;
+    }
+
+    .search-when span {
+        margin-left: 52px;
+    }
+
+    .search-when span::before {
+        top: 0;
+        left: -34px;
+    }
+
+    .search-duration span {
+        margin-left: 52px;
+    }
+
+    .search-duration span::before {
+        top: 0;
+        left: -35px;
+    }
+
+
+    .search-btn {
+        flex: 1 0 60px;
+        /* display: flex; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-btn svg {
+        width: 43px;
+        margin-top: 7px;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main-wrapper.css">
+    <link rel="stylesheet" href="slider-nav.css">
+    <link rel="stylesheet" href="main-welcom.css">
+    <link rel="stylesheet" href="search-wrapper.css">
+    <link rel="stylesheet" href="./libre-franklin-webfont/LibreFranklinFont.css">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-hiden-navigation">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    id="vector">
+                    <path
+                        id="path"
+                        d="M 6.92 9.46 L 16.852 9.46 Z"
+                        fill="#d8d8d8"
+                        stroke="#000000"
+                        stroke-width="0.1"/>
+                    <path
+                        id="path_1"
+                        d="M 7.011 11.955 L 16.943 11.955 Z"
+                        fill="#d8d8d8"
+                        stroke="#000000"
+                        stroke-width="0.1"/>
+                    <path
+                        id="path_2"
+                        d="M 7.011 14.54 L 16.943 14.54 Z"
+                        fill="#d8d8d8"
+                        stroke="#000000"
+                        stroke-width="0.1"/>
+                </svg>
+            </div>
+            <div class="header-logo">
+                <img src="./logo-agents-navy-reg.png" class="logo">
+            </div>
+            <div class="header-navigation">
+                <div>destinations</div>
+                <div>style of travel</div>
+                <div>about us</div>
+            </div>
+            <div class="header-btn call-btn">
+                <img src="./call-icon.png">
+            </div>
+            <div class="header-btn account-btn">
+                <img src="./account.png">
+            </div>
+            <div class="header-btn cart-btn">
+                <img src="./cart-icon.png">
+            </div>
+        </header>
+        <div class="main-wrapper">
+            <div class="main-blank"></div>
+            <div class="main-welcom">
+                <div class="main-welcom-content-wraper">
+                    <div class="company-title">
+                        <h1><span>Travel</span> <span>Agents</span> <span>Portal</span></h1>
+                    </div>
+                    <div class="company-description">
+                        Enim consequat laboris culpa deserunt officia laborum quis.
+                    </div>
+                    <div class="create-account-btn">create an account</div>
+                    <div class="authorize-suggestion">Have an Account Already? <a href="#">Login Now</a></div> 
+                </div>
+                <div class="search-wrapper">
+                    <div class="search-wrapper-blank-left"></div>
+                    <div class="search-fields-wrapper">
+                        <div class="search-where">
+                                <input class='search-where-input' type="text" placeholder="Where do you want to go?">
+                        </div>
+                        <div class="search-when"><span>When</span></div>
+                        <div class="search-duration"><span>Duration</span></div>
+                        <div class="search-btn">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="6 8 14 9"
+                                id="vector">
+                                <path
+                                    id="path"
+                                    d="M 5.959 12.05 L 18.933 12 Z"
+                                    fill="#d8d8d8"
+                                    stroke="#ffffff"
+                                    stroke-width="0.2"/>
+                                <path
+                                    id="path_1"
+                                    d="M 19.008 12 L 14.925 15.933 Z"
+                                    fill="#d8d8d8"
+                                    stroke="#ffffff"
+                                    stroke-width="0.2"/>
+                                <path
+                                    id="path_2"
+                                    d="M 19.058 12 L 14.975 8.067 Z"
+                                    fill="#d8d8d8"
+                                    stroke="#ffffff"
+                                    stroke-width="0.2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="search-wrapper-blank-right"></div>
+                </div> 
+            </div>
+            <div class="main-slider">
+                <div class="slider-nav">
+                    <div class="slider-btn">
+                        <div class="slider-btn-dest">destinations</div>
+                        <div class="slider-btn-place">north america</div>
+                    </div>
+                    <div class="slider-order">
+                        <div class="order-rect"></div>
+                        <div class="order-rect"></div>
+                        <div class="order-rect"></div>
+                        <div class="order-rect"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+// deny collapse and extend when searh bar horisontal
+// collapse and extend search bar horisontal
+let searchWrapper = document.getElementsByClassName('search-wrapper')[0];
+let searchWhen = document.getElementsByClassName('search-when')[0];
+
+let expandColapseSearch = () => {
+    if(window.getComputedStyle(searchWrapper).position !== 'absolute') {
+        if(window.getComputedStyle(searchWhen).display === 'none'){
+            document.getElementsByClassName('search-when')[0].style.display = 'flex';
+            document.getElementsByClassName('search-duration')[0].style.display = 'flex';
+            document.getElementsByClassName('search-btn')[0].style.display = 'flex';
+        } else {
+            document.getElementsByClassName('search-when')[0].style.display = 'none';
+            document.getElementsByClassName('search-duration')[0].style.display = 'none';
+            document.getElementsByClassName('search-btn')[0].style.display = 'none';
+        }
+    }
+}
+
+document.getElementsByClassName('search-fields-wrapper')[0].onclick = expandColapseSearch;
+
+
+
+// change where-input placeholder 
+let whereInput = document.getElementsByClassName('search-where-input')[0];
+
+
+whereInput.onfocus = (e) => {
+    if(e.target.value === ''){
+      e.target.placeholder = 'Italy, China, etc.';
+      e.target.classList.add('my-input-grey-color-placeholder');
+    }
+}
+
+whereInput.onblur = (e) => {
+    if(e.target.placeholder !== 'Where do you want to go?' && e.target.value === ''){
+      e.target.placeholder = 'Where do you want to go?';
+      e.target.classList.remove('my-input-grey-color-placeholder');
+    }
+}
+
+
+</script>
+</html>

@@ -1,0 +1,136 @@
+header {
+    height: 89px;
+    display: flex;
+}
+
+.header-hiden-navigation {
+    flex: 0 1 130px;
+    background-color: #ebf3ff;
+}
+
+.header-hiden-navigation svg {
+    display: none;
+}
+
+.header-logo {
+    flex: 0 0 348px;
+    background-color: #ebf3ff;
+
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 129px;
+    height: 53px;
+    object-fit: contain;
+}
+
+
+.header-navigation {
+    flex: 1 0 348px;
+    text-transform: uppercase;
+
+    font-family: Libre Franklin SemiBold;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.83;
+    letter-spacing: 0.6px;
+    color: #364459;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.header-btn {
+    flex: 0 0 89px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-btn {
+    border-left: solid 0.5px #BBC9DF;
+    border-right: solid 0.5px #BBC9DF;
+}
+
+.call-btn img {
+    height: 18px;
+    width: 18px;
+    object-fit: contain;
+}
+
+.account-btn img {
+    height: 19px;
+    width: 13px;
+    object-fit: contain;
+}
+
+.cart-btn{
+    background-color: #0d3a7f;
+}
+.cart-btn img {
+    height: 23px;
+    width: 19px;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 970px){
+    header {
+        height: 60px;
+    }
+
+    .header-hiden-navigation{
+        flex: 0 0 60px;
+        border-left: solid 0.5px #BBC9DF;
+        border-top: solid 0.5px #BBC9DF;
+        border-right: solid 0.5px #BBC9DF;
+    }
+
+    .header-hiden-navigation svg {
+        display: inline;
+    }
+
+    .header-logo {
+        flex: 1 1 256px;
+        border-top: solid 0.5px #BBC9DF;
+    }
+
+    .header-logo img {
+        width: 108px;
+        height: 44px;
+        margin-left: 20px;
+    }
+
+    .header-navigation, .call-btn, .account-btn {
+        display: none;
+    }
+
+    .cart-btn{
+        flex: 0 0 60px;
+        position: relative;
+    }
+
+    .cart-btn img {
+        height: 21px;
+        width: 27px;
+    }
+
+    .cart-btn::before{
+        content: '';
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        background-color: #16c2b8;
+        top: 18px;
+        left: 39px;
+        border-radius: 50%;
+    }
+}
