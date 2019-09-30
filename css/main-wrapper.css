@@ -16,7 +16,7 @@
 
 .main-slider {
     flex: 1 0 615px;
-    background-image: url('/img/johannes-ludwig-348591-unsplash@2x.png');
+    background-image: url('/task-layout/img/johannes-ludwig-348591-unsplash@2x.png');
     background-position: center;
     background-size: cover;
 }
@@ -30,7 +30,7 @@
     }
     .main-welcom {
         flex: 1 1 130px;
-        background-image: url('/img/jasper-van-der-meij-97274-unsplash@3x.png');
+        background-image: url('/task-layout/img/jasper-van-der-meij-97274-unsplash@3x.png');
         background-position: center;
         background-size: cover;
 

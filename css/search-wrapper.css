@@ -57,7 +57,7 @@
     position: absolute;
     width: 15px;
     height: 25px;
-    background-image: url('/img/004-pin.png');
+    background-image: url('/task-layout/img/004-pin.png');
     top: 32px;
     left: 24px;
 }
@@ -98,7 +98,7 @@
     position: absolute;
     width: 23px;
     height: 23px;
-    background-image: url('/img/group.png');
+    background-image: url('/task-layout/img/group.png');
     top: 0;
     left: -31px;
 }
@@ -127,7 +127,7 @@
     position: absolute;
     width: 26px;
     height: 20px;
-    background-image: url('/img/002-bed.png');
+    background-image: url('/task-layout/img/002-bed.png');
     top: 0;
     left: -38px;
 }
